@@ -6,14 +6,13 @@
 
 body {
   font-family: Roboto;
-  background: #f2f2f2; }
+  background-color: #fff; }
 
 .header {
   display: flex;
   justify-content: space-between;
   height: 80px;
   margin: 0 auto;
-  background-color: #fff;
   padding: 0 1.5rem; }
   .header__brand {
     margin: auto 0; }
@@ -41,3 +40,57 @@ body {
       transition: box-shadow 500ms; }
       .header__nav ul button:hover {
         box-shadow: 0 0 3px #888888; }
+
+.search {
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+  padding: 1rem 2rem; }
+  .search__options {
+    margin: auto 0;
+    padding: 10px 0; }
+    .search__options ul li {
+      display: inline;
+      padding: 0.5rem; }
+      .search__options ul li a {
+        padding-bottom: 2px;
+        cursor: pointer; }
+        .search__options ul li a:hover {
+          border-bottom: 2px solid #000; }
+      .search__options ul li .new {
+        display: inline;
+        color: #FFF;
+        background-color: #FF385C;
+        text-transform: uppercase;
+        padding: 1px 5px;
+        font-size: 0.7rem;
+        border-radius: 4px; }
+  .search__form {
+    display: flex;
+    border: 1px solid #ebebeb;
+    border-radius: 12px;
+    justify-content: center; }
+    .search__form div {
+      width: 33vw;
+      padding: 1rem;
+      cursor: pointer;
+      border-radius: 12px;
+      transition: border 50ms ease-in;
+      border-color: transparent; }
+      .search__form div:hover {
+        border: 1px solid #ebebeb;
+        border-radius: 12px; }
+      .search__form div:last-of-type button {
+        float: right;
+        padding: 0.7rem;
+        border: 1px solid #ebebeb;
+        border-radius: 5px;
+        outline-style: none;
+        cursor: pointer;
+        transition: box-shadow 500ms;
+        background-color: #FF385C;
+        background-image: linear-gradient(to right, #FF385C, #ff0532);
+        color: #FFF; }
+        .search__form div:last-of-type button i {
+          color: #FFF;
+          margin-right: 5px; }

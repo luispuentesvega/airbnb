@@ -2,13 +2,21 @@
   "name": "airbnb",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "homepage": "https://luispuentesvega.github.io/airbnb/",
   "scripts": {
-    "sass": "node-sass -w styles/main.scss  dist/main.css"
+    "sass": "node-sass -w styles/main.scss  dist/main.css",
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "jest",
+    "eject": "react-scripts eject",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "node-sass": "^4.13.1"
+    "gh-pages": "^2.2.0",
+    "node-sass": "^4.13.1",
+    "react-scripts": "^3.4.1"
   }
 }
