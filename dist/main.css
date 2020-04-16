@@ -12,7 +12,7 @@ body {
   display: flex;
   justify-content: space-between;
   height: 80px;
-  margin: 0 auto;
+  margin: 0 2rem;
   padding: 0 1.5rem; }
   .header__brand {
     margin: auto 0; }
@@ -26,13 +26,13 @@ body {
       display: inline-block; }
       .header__nav ul li a {
         text-decoration: none;
-        padding: .5rem;
+        padding: 0.5rem;
         line-height: 4; }
         .header__nav ul li a:hover {
           background: rgba(34, 34, 34, 0.05);
           border-radius: 1rem; }
     .header__nav ul button {
-      padding: .5rem;
+      padding: 0.5rem;
       border: 1px solid #ebebeb;
       border-radius: 1rem;
       outline-style: none;
@@ -44,7 +44,7 @@ body {
 .search {
   display: flex;
   flex-direction: column;
-  margin: 0 auto;
+  margin: 0 2rem;
   padding: 1rem 2rem; }
   .search__options {
     margin: auto 0;
@@ -61,8 +61,8 @@ body {
           color: gray; }
       .search__options ul li .new {
         display: inline;
-        color: #FFF;
-        background-color: #FF385C;
+        color: #fff;
+        background-color: #ff385c;
         text-transform: uppercase;
         padding: 1px 5px;
         font-size: 0.7rem;
@@ -90,9 +90,42 @@ body {
         outline-style: none;
         cursor: pointer;
         transition: box-shadow 500ms;
-        background-color: #FF385C;
-        background-image: linear-gradient(to right, #FF385C, #ff0532);
-        color: #FFF; }
+        background-color: #ff385c;
+        background-image: linear-gradient(to right, #ff385c, #ff0532);
+        color: #fff; }
         .search__form div:last-of-type button i {
-          color: #FFF;
+          color: #fff;
           margin-right: 5px; }
+
+.message {
+  margin: auto 4rem; }
+  .message span {
+    font-size: 2.2rem;
+    color: #ff385c; }
+
+.main_options {
+  margin: auto 4rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around; }
+  .main_options .option {
+    width: 32%;
+    border-radius: 9px;
+    box-shadow: 3px 3px 5px #e6e6e6;
+    overflow: hidden;
+    position: relative; }
+    .main_options .option .new {
+      background-color: #FFF;
+      position: absolute;
+      border-radius: 3px;
+      padding: 0.3rem;
+      top: 10px;
+      left: 10px;
+      font-size: 12px;
+      font-weight: bold; }
+    .main_options .option img {
+      width: 100%; }
+    .main_options .option__legend {
+      padding: 0.5rem; }
+      .main_options .option__legend p {
+        color: gray; }
