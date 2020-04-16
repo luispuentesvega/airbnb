@@ -101,7 +101,9 @@ body {
   margin: 2rem 4rem; }
   .message span {
     font-size: 2.2rem;
-    color: #ff385c; }
+    background: linear-gradient(to right, #92174d 9.38%, #e41d5c 88.54%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent; }
 
 .main_options {
   margin: auto 4rem;
