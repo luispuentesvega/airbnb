@@ -96,3 +96,13 @@ body {
       .search__input:last-of-type button i {
         color: #fff;
         margin-right: 5px; }
+
+.message {
+  margin: 2rem 4rem; }
+  .message__text {
+    font-size: 2.5rem;
+    font-weight: normal;
+    background: linear-gradient(to right, #92174d 9.38%, #e41d5c 88.54%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent; }

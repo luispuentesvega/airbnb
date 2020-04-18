@@ -156,3 +156,21 @@ body {
     }
   }
 }
+
+// Message section
+.message {
+  margin: 2rem 4rem;
+
+  &__text {
+    font-size: 2.5rem;
+    font-weight: normal;
+    background: linear-gradient(
+      to right,
+      rgb(146, 23, 77) 9.38%,
+      rgb(228, 29, 92) 88.54%
+    );
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+}
