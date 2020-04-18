@@ -31,14 +31,14 @@ body {
     .header__link:hover {
       background: rgba(34, 34, 34, 0.05);
       border-radius: 1rem; }
-  .header__button {
+  .header__sign-up {
     border: 1px solid #ebebeb;
     border-radius: 1rem;
     cursor: pointer;
     outline-style: none;
     padding: 0.5rem;
     transition: box-shadow 500ms; }
-    .header__button:hover {
+    .header__sign-up:hover {
       box-shadow: 0 0 3px #888; }
 
 .search {
