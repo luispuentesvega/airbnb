@@ -1,83 +1,82 @@
 $main-color: #ff385c;
+$light-gray: #888;
 
 @mixin linear-gradient($direction, $color-stops...) {
   background: nth(nth($color-stops, 1), 1);
-  background: -webkit-linear-gradient(legacy-direction($direction), $color-stops);
+  background: -webkit-linear-gradient(
+    legacy-direction($direction),
+    $color-stops
+  );
   background: linear-gradient($direction, $color-stops);
 }
 
 * {
+  box-sizing: border-box;
   margin: 0;
   padding: 0;
-  color: #000;
-  box-sizing: border-box;
 }
 
 body {
-  font-family: Roboto;
   background-color: #fff;
+  font-family: Roboto;
 }
 
 // Header
 .header {
   display: flex;
-  justify-content: space-between;
   height: 80px;
-  // border: 1px solid red;
+  justify-content: space-between;
   margin: 0 2rem;
-  // width: 90vw;
   padding: 0 1.5rem;
 
   &__brand {
     margin: auto 0;
+  }
 
-    img {
-      width: 50px;
-      height: 50px;
-      padding: 0.5rem;
-    }
+  &__image {
+    height: 50px;
+    padding: 0.5rem;
+    width: 50px;
   }
 
   &__nav {
-    // border: 1px solid blue;
     margin: auto 0;
+  }
 
-    ul {
-      li {
-        display: inline-block;
+  &__item {
+    display: inline-block;
+  }
 
-        a {
-          text-decoration: none;
-          padding: 0.5rem;
-          line-height: 4;
+  &__link {
+    color: #000;
+    line-height: 4;
+    padding: 0.5rem;
+    text-decoration: none;
 
-          &:hover {
-            background: rgba(34, 34, 34, 0.05);
-            border-radius: 1rem;
-          }
-        }
-      }
+    &:hover {
+      background: rgba(34, 34, 34, 0.05);
+      border-radius: 1rem;
+    }
+  }
 
-      button {
-        padding: 0.5rem;
-        border: 1px solid rgb(235, 235, 235);
-        border-radius: 1rem;
-        outline-style: none;
-        cursor: pointer;
-        transition: box-shadow 500ms;
+  &__button {
+    border: 1px solid rgb(235, 235, 235);
+    border-radius: 1rem;
+    cursor: pointer;
+    outline-style: none;
+    padding: 0.5rem;
+    transition: box-shadow 500ms;
 
-        &:hover {
-          box-shadow: 0 0 3px #888888;
-        }
-      }
+    &:hover {
+      box-shadow: 0 0 3px $light-gray;
     }
   }
 }
 
+// Search row
 .search {
   display: flex;
   flex-direction: column;
-  // border: 1px solid red;
   margin: 0 2rem;
   padding: 1rem 2rem;
 
@@ -85,33 +84,31 @@ body {
     margin: auto 0;
     padding: 10px 0;
 
-    ul {
-      li {
-        display: inline;
-        padding: 0.5rem;
+    .search__item {
+      display: inline;
+      padding: 0.5rem;
 
-        a {
-          padding-bottom: 2px;
-          cursor: pointer;
-          transition: color 1s ease-in;
+      a {
+        padding-bottom: 2px;
+        cursor: pointer;
+        transition: color 1s ease-in;
 
-          &:hover {
-            border-bottom: 2px solid #000;
-            color: lighten(#000000, 50%);
-          }
-        }
-
-        .new {
-          display: inline;
-          color: #fff;
-          background-color: $main-color;
-          text-transform: uppercase;
-          padding: 1px 5px;
-          font-size: 0.7rem;
-          border-radius: 4px;
+        &:hover {
+          border-bottom: 2px solid #000;
+          color: lighten(#000000, 50%);
         }
       }
     }
+  }
+
+  &__new {
+    display: inline;
+    color: #fff;
+    background-color: $main-color;
+    text-transform: uppercase;
+    padding: 1px 5px;
+    font-size: 0.7rem;
+    border-radius: 4px;
   }
 
   &__form {
@@ -120,7 +117,7 @@ body {
     border-radius: 12px;
     justify-content: center;
 
-    div {
+    .search__item {
       width: 33vw;
       padding: 1rem;
       cursor: pointer;
@@ -143,9 +140,11 @@ body {
           cursor: pointer;
           transition: box-shadow 500ms;
           background-color: $main-color;
-          background-image: linear-gradient(to right,
-              $main-color,
-              darken($main-color, 10%));
+          background-image: linear-gradient(
+            to right,
+            $main-color,
+            darken($main-color, 10%)
+          );
           color: #fff;
 
           i {
@@ -153,58 +152,6 @@ body {
             margin-right: 5px;
           }
         }
-      }
-    }
-  }
-}
-
-// Message section
-.message {
-  margin: 2rem 4rem;
-
-  span {
-    font-size: 2.2rem;
-    // color: $main-color;
-    background: linear-gradient(to right, rgb(146, 23, 77) 9.38%, rgb(228, 29, 92) 88.54%);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-  }
-}
-
-// Main Option section
-.main_options {
-  margin: auto 4rem;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-around;
-
-  .option {
-    width: 32%;
-    border-radius: 9px;
-    box-shadow: 3px 3px 5px lighten(#000000, 90%);
-    overflow: hidden;
-    position: relative;
-
-    .new {
-      background-color: #FFF;
-      position: absolute;
-      border-radius: 3px;
-      padding: 0.3rem;
-      top: 10px;
-      left: 10px;
-      font-size: 12px;
-      font-weight: bold;
-    }
-
-    img {
-      width: 100%;
-    }
-
-    &__legend {
-      padding: 0.5rem;
-
-      p {
-        color: lighten(#000000, 50%);
       }
     }
   }

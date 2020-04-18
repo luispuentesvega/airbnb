@@ -1,45 +1,45 @@
 * {
+  box-sizing: border-box;
   margin: 0;
-  padding: 0;
-  color: #000;
-  box-sizing: border-box; }
+  padding: 0; }
 
 body {
-  font-family: Roboto;
-  background-color: #fff; }
+  background-color: #fff;
+  font-family: Roboto; }
 
 .header {
   display: flex;
-  justify-content: space-between;
   height: 80px;
+  justify-content: space-between;
   margin: 0 2rem;
   padding: 0 1.5rem; }
   .header__brand {
     margin: auto 0; }
-    .header__brand img {
-      width: 50px;
-      height: 50px;
-      padding: 0.5rem; }
+  .header__image {
+    height: 50px;
+    padding: 0.5rem;
+    width: 50px; }
   .header__nav {
     margin: auto 0; }
-    .header__nav ul li {
-      display: inline-block; }
-      .header__nav ul li a {
-        text-decoration: none;
-        padding: 0.5rem;
-        line-height: 4; }
-        .header__nav ul li a:hover {
-          background: rgba(34, 34, 34, 0.05);
-          border-radius: 1rem; }
-    .header__nav ul button {
-      padding: 0.5rem;
-      border: 1px solid #ebebeb;
-      border-radius: 1rem;
-      outline-style: none;
-      cursor: pointer;
-      transition: box-shadow 500ms; }
-      .header__nav ul button:hover {
-        box-shadow: 0 0 3px #888888; }
+  .header__item {
+    display: inline-block; }
+  .header__link {
+    color: #000;
+    line-height: 4;
+    padding: 0.5rem;
+    text-decoration: none; }
+    .header__link:hover {
+      background: rgba(34, 34, 34, 0.05);
+      border-radius: 1rem; }
+  .header__button {
+    border: 1px solid #ebebeb;
+    border-radius: 1rem;
+    cursor: pointer;
+    outline-style: none;
+    padding: 0.5rem;
+    transition: box-shadow 500ms; }
+    .header__button:hover {
+      box-shadow: 0 0 3px #888; }
 
 .search {
   display: flex;
@@ -49,40 +49,40 @@ body {
   .search__options {
     margin: auto 0;
     padding: 10px 0; }
-    .search__options ul li {
+    .search__options .search__item {
       display: inline;
       padding: 0.5rem; }
-      .search__options ul li a {
+      .search__options .search__item a {
         padding-bottom: 2px;
         cursor: pointer;
         transition: color 1s ease-in; }
-        .search__options ul li a:hover {
+        .search__options .search__item a:hover {
           border-bottom: 2px solid #000;
           color: gray; }
-      .search__options ul li .new {
-        display: inline;
-        color: #fff;
-        background-color: #ff385c;
-        text-transform: uppercase;
-        padding: 1px 5px;
-        font-size: 0.7rem;
-        border-radius: 4px; }
+  .search__new {
+    display: inline;
+    color: #fff;
+    background-color: #ff385c;
+    text-transform: uppercase;
+    padding: 1px 5px;
+    font-size: 0.7rem;
+    border-radius: 4px; }
   .search__form {
     display: flex;
     border: 1px solid #ebebeb;
     border-radius: 12px;
     justify-content: center; }
-    .search__form div {
+    .search__form .search__item {
       width: 33vw;
       padding: 1rem;
       cursor: pointer;
       border-radius: 12px;
       transition: border 50ms ease-in;
       border-color: transparent; }
-      .search__form div:hover {
+      .search__form .search__item:hover {
         border: 1px solid #ebebeb;
         border-radius: 12px; }
-      .search__form div:last-of-type button {
+      .search__form .search__item:last-of-type button {
         float: right;
         padding: 0.7rem;
         border: 1px solid #ebebeb;
@@ -93,41 +93,6 @@ body {
         background-color: #ff385c;
         background-image: linear-gradient(to right, #ff385c, #ff0532);
         color: #fff; }
-        .search__form div:last-of-type button i {
+        .search__form .search__item:last-of-type button i {
           color: #fff;
           margin-right: 5px; }
-
-.message {
-  margin: 2rem 4rem; }
-  .message span {
-    font-size: 2.2rem;
-    background: linear-gradient(to right, #92174d 9.38%, #e41d5c 88.54%);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent; }
-
-.main_options {
-  margin: auto 4rem;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-around; }
-  .main_options .option {
-    width: 32%;
-    border-radius: 9px;
-    box-shadow: 3px 3px 5px #e6e6e6;
-    overflow: hidden;
-    position: relative; }
-    .main_options .option .new {
-      background-color: #FFF;
-      position: absolute;
-      border-radius: 3px;
-      padding: 0.3rem;
-      top: 10px;
-      left: 10px;
-      font-size: 12px;
-      font-weight: bold; }
-    .main_options .option img {
-      width: 100%; }
-    .main_options .option__legend {
-      padding: 0.5rem; }
-      .main_options .option__legend p {
-        color: gray; }
