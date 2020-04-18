@@ -49,50 +49,50 @@ body {
   .search__options {
     margin: auto 0;
     padding: 10px 0; }
-    .search__options .search__item {
-      display: inline;
-      padding: 0.5rem; }
-      .search__options .search__item a {
-        padding-bottom: 2px;
-        cursor: pointer;
-        transition: color 1s ease-in; }
-        .search__options .search__item a:hover {
-          border-bottom: 2px solid #000;
-          color: gray; }
-  .search__new {
+  .search__item {
     display: inline;
-    color: #fff;
-    background-color: #ff385c;
-    text-transform: uppercase;
-    padding: 1px 5px;
-    font-size: 0.7rem;
-    border-radius: 4px; }
+    padding: 0.5rem; }
+  .search__link {
+    cursor: pointer;
+    padding-bottom: 2px;
+    transition: color 1s ease-in; }
+    .search__link:hover {
+      border-bottom: 2px solid #000;
+      color: gray; }
   .search__form {
-    display: flex;
     border: 1px solid #ebebeb;
     border-radius: 12px;
+    display: flex;
     justify-content: center; }
-    .search__form .search__item {
-      width: 33vw;
-      padding: 1rem;
+  .search__new {
+    background-color: #ff385c;
+    border-radius: 4px;
+    color: #fff;
+    display: inline;
+    font-size: 0.7rem;
+    padding: 1px 5px;
+    text-transform: uppercase; }
+  .search__input {
+    border-color: transparent;
+    border-radius: 12px;
+    cursor: pointer;
+    padding: 1rem;
+    transition: border 50ms ease-in;
+    width: 33vw; }
+    .search__input:hover {
+      border: 1px solid #ebebeb;
+      border-radius: 12px; }
+    .search__input:last-of-type button {
+      background-color: #ff385c;
+      background-image: linear-gradient(to right, #ff385c, #ff0532);
+      border: 1px solid #ebebeb;
+      border-radius: 5px;
+      color: #fff;
       cursor: pointer;
-      border-radius: 12px;
-      transition: border 50ms ease-in;
-      border-color: transparent; }
-      .search__form .search__item:hover {
-        border: 1px solid #ebebeb;
-        border-radius: 12px; }
-      .search__form .search__item:last-of-type button {
-        float: right;
-        padding: 0.7rem;
-        border: 1px solid #ebebeb;
-        border-radius: 5px;
-        outline-style: none;
-        cursor: pointer;
-        transition: box-shadow 500ms;
-        background-color: #ff385c;
-        background-image: linear-gradient(to right, #ff385c, #ff0532);
-        color: #fff; }
-        .search__form .search__item:last-of-type button i {
-          color: #fff;
-          margin-right: 5px; }
+      float: right;
+      outline-style: none;
+      padding: 0.7rem;
+      transition: box-shadow 500ms; }
+      .search__input:last-of-type button i {
+        color: #fff;
+        margin-right: 5px; }

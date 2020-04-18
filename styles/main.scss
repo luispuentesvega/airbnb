@@ -73,7 +73,7 @@ body {
   }
 }
 
-// Search row
+// Search
 .search {
   display: flex;
   flex-direction: column;
@@ -83,74 +83,74 @@ body {
   &__options {
     margin: auto 0;
     padding: 10px 0;
+  }
 
-    .search__item {
-      display: inline;
-      padding: 0.5rem;
+  &__item {
+    display: inline;
+    padding: 0.5rem;
+  }
 
-      a {
-        padding-bottom: 2px;
-        cursor: pointer;
-        transition: color 1s ease-in;
+  &__link {
+    cursor: pointer;
+    padding-bottom: 2px;
+    transition: color 1s ease-in;
 
-        &:hover {
-          border-bottom: 2px solid #000;
-          color: lighten(#000000, 50%);
-        }
-      }
+    &:hover {
+      border-bottom: 2px solid #000;
+      color: lighten(#000000, 50%);
     }
   }
 
-  &__new {
-    display: inline;
-    color: #fff;
-    background-color: $main-color;
-    text-transform: uppercase;
-    padding: 1px 5px;
-    font-size: 0.7rem;
-    border-radius: 4px;
-  }
-
   &__form {
-    display: flex;
     border: 1px solid rgb(235, 235, 235);
     border-radius: 12px;
+    display: flex;
     justify-content: center;
+  }
 
-    .search__item {
-      width: 33vw;
-      padding: 1rem;
-      cursor: pointer;
+  &__new {
+    background-color: $main-color;
+    border-radius: 4px;
+    color: #fff;
+    display: inline;
+    font-size: 0.7rem;
+    padding: 1px 5px;
+    text-transform: uppercase;
+  }
+
+  &__input {
+    border-color: transparent;
+    border-radius: 12px;
+    cursor: pointer;
+    padding: 1rem;
+    transition: border 50ms ease-in;
+    width: 33vw;
+
+    &:hover {
+      border: 1px solid rgb(235, 235, 235);
       border-radius: 12px;
-      transition: border 50ms ease-in;
-      border-color: transparent;
+    }
 
-      &:hover {
+    &:last-of-type {
+      button {
+        background-color: $main-color;
+        background-image: linear-gradient(
+          to right,
+          $main-color,
+          darken($main-color, 10%)
+        );
         border: 1px solid rgb(235, 235, 235);
-        border-radius: 12px;
-      }
+        border-radius: 5px;
+        color: #fff;
+        cursor: pointer;
+        float: right;
+        outline-style: none;
+        padding: 0.7rem;
+        transition: box-shadow 500ms;
 
-      &:last-of-type {
-        button {
-          float: right;
-          padding: 0.7rem;
-          border: 1px solid rgb(235, 235, 235);
-          border-radius: 5px;
-          outline-style: none;
-          cursor: pointer;
-          transition: box-shadow 500ms;
-          background-color: $main-color;
-          background-image: linear-gradient(
-            to right,
-            $main-color,
-            darken($main-color, 10%)
-          );
+        i {
           color: #fff;
-
-          i {
-            color: #fff;
-            margin-right: 5px;
-          }
+          margin-right: 5px;
         }
       }
     }
