@@ -133,3 +133,14 @@ body {
       padding: 0.5rem; }
       .cards .card__legend p {
         color: gray; }
+
+footer {
+  bottom: 0;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: space-between;
+  margin: 20px 5rem;
+  position: absolute;
+  width: calc(100vw - 10rem); }
+  footer ul > li {
+    display: inline; }

@@ -3,10 +3,8 @@ $light-gray: #888;
 
 @mixin linear-gradient($direction, $color-stops...) {
   background: nth(nth($color-stops, 1), 1);
-  background: -webkit-linear-gradient(
-    legacy-direction($direction),
-    $color-stops
-  );
+  background: -webkit-linear-gradient(legacy-direction($direction),
+      $color-stops);
   background: linear-gradient($direction, $color-stops);
 }
 
@@ -134,11 +132,9 @@ body {
     &:last-of-type {
       button {
         background-color: $main-color;
-        background-image: linear-gradient(
-          to right,
-          $main-color,
-          darken($main-color, 10%)
-        );
+        background-image: linear-gradient(to right,
+            $main-color,
+            darken($main-color, 10%));
         border: 1px solid rgb(235, 235, 235);
         border-radius: 5px;
         color: #fff;
@@ -164,11 +160,9 @@ body {
   &__text {
     font-size: 2.5rem;
     font-weight: normal;
-    background: linear-gradient(
-      to right,
-      rgb(146, 23, 77) 9.38%,
-      rgb(228, 29, 92) 88.54%
-    );
+    background: linear-gradient(to right,
+        rgb(146, 23, 77) 9.38%,
+        rgb(228, 29, 92) 88.54%);
     background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -211,5 +205,20 @@ body {
         color: lighten(#000000, 50%);
       }
     }
+  }
+}
+
+
+footer {
+  bottom: 0;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: space-between;
+  margin: 20px 5rem;
+  position: absolute;
+  width: calc(100vw - 10rem);
+
+  ul>li {
+    display: inline;
   }
 }
