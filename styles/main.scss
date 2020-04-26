@@ -161,7 +161,7 @@ body {
 
 // Message section
 .message {
-  // margin: 2rem 4rem;
+  margin: 2rem auto;
 
   &__text {
     font-size: 2.5rem;
@@ -220,6 +220,7 @@ body {
 .online-experience {
   background-color: #000;
   color: #fff;
+  margin-top: 2rem;
 
   &__header {
     padding: 2rem 0;
