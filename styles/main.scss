@@ -3,8 +3,10 @@ $light-gray: #888;
 
 @mixin linear-gradient($direction, $color-stops...) {
   background: nth(nth($color-stops, 1), 1);
-  background: -webkit-linear-gradient(legacy-direction($direction),
-      $color-stops);
+  background: -webkit-linear-gradient(
+    legacy-direction($direction),
+    $color-stops
+  );
   background: linear-gradient($direction, $color-stops);
 }
 
@@ -19,13 +21,17 @@ body {
   font-family: Roboto;
 }
 
+.main-header,
+.main-body {
+  margin: 0 auto;
+  padding: 1rem 5rem;
+}
+
 // Header
 .header {
   display: flex;
   height: 80px;
   justify-content: space-between;
-  margin: 0 2rem;
-  padding: 0 1.5rem;
 
   &__brand {
     margin: auto 0;
@@ -75,8 +81,6 @@ body {
 .search {
   display: flex;
   flex-direction: column;
-  margin: 0 2rem;
-  padding: 1rem 2rem;
 
   &__options {
     margin: auto 0;
@@ -132,9 +136,11 @@ body {
     &:last-of-type {
       button {
         background-color: $main-color;
-        background-image: linear-gradient(to right,
-            $main-color,
-            darken($main-color, 10%));
+        background-image: linear-gradient(
+          to right,
+          $main-color,
+          darken($main-color, 10%)
+        );
         border: 1px solid rgb(235, 235, 235);
         border-radius: 5px;
         color: #fff;
@@ -155,14 +161,16 @@ body {
 
 // Message section
 .message {
-  margin: 2rem 4rem;
+  // margin: 2rem 4rem;
 
   &__text {
     font-size: 2.5rem;
     font-weight: normal;
-    background: linear-gradient(to right,
-        rgb(146, 23, 77) 9.38%,
-        rgb(228, 29, 92) 88.54%);
+    background: linear-gradient(
+      to right,
+      rgb(146, 23, 77) 9.38%,
+      rgb(228, 29, 92) 88.54%
+    );
     background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -174,7 +182,7 @@ body {
   display: flex;
   flex-direction: row;
   justify-content: space-around;
-  margin: auto 4rem;
+  // margin: auto 4rem;
 
   .card {
     border-radius: 9px;
@@ -208,6 +216,79 @@ body {
   }
 }
 
+// Online Experience
+.online-experience {
+  background-color: #000;
+  color: #fff;
+
+  &__header {
+    padding: 2rem 0;
+    position: relative;
+
+    button {
+      background-color: #000;
+      border-radius: 5px;
+      color: #fff;
+      float: right;
+      padding: 0.5rem 0.7rem;
+      position: absolute;
+      right: 5rem;
+      top: 2.5rem;
+    }
+  }
+
+  &__body {
+    display: flex;
+    // padding: 2rem 2rem;
+    .section {
+      background-color: rgb(34, 34, 34);
+      border-radius: 10px;
+      color: #fff;
+      margin: 1rem;
+      overflow: hidden;
+      box-sizing: border-box;
+      &__image {
+        img {
+          height: 100%;
+          width: 100%;
+        }
+      }
+      &__legend {
+        padding: 0.5rem 1rem 1.5rem;
+      }
+    }
+    .section:first-of-type {
+      width: 50%;
+      max-height: 600px;
+      img {
+        max-height: 550px;
+      }
+    }
+    .container {
+      width: 50%;
+      .section--small {
+        float: left;
+        max-height: 275px;
+        max-width: 392px;
+        width: calc(50% - 2rem);
+        img {
+          max-height: 225px;
+        }
+      }
+      .section--small::after {
+        clear: both;
+      }
+      .section--medium {
+        max-width: 784px;
+        width: calc(100% - 2rem);
+        max-height: 275px;
+        img {
+          max-height: 225px;
+        }
+      }
+    }
+  }
+}
 
 footer {
   bottom: 0;
@@ -215,10 +296,10 @@ footer {
   display: flex;
   justify-content: space-between;
   margin: 20px 5rem;
-  position: absolute;
+  position: fixed;
   width: calc(100vw - 10rem);
 
-  ul>li {
+  ul > li {
     display: inline;
   }
 }
