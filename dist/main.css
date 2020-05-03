@@ -10,7 +10,7 @@ body {
 .main-header,
 .main-body {
   margin: 0 auto;
-  padding: 1rem 5rem; }
+  padding: 1rem 4rem; }
 
 .header {
   display: flex;
@@ -189,7 +189,8 @@ body {
 
 .hero {
   color: #000;
-  margin-top: 3rem; }
+  margin-top: 3rem;
+  min-height: 140px; }
   .hero__section {
     float: left;
     width: 50%; }
@@ -200,6 +201,36 @@ body {
       margin-top: 1rem; }
     .hero__section:nth-child(2) {
       padding: 0 6rem 0 2rem; }
+
+.stay-informed {
+  background-color: #f7f7f7;
+  overflow: hidden; }
+  .stay-informed__title {
+    padding-top: 3rem;
+    padding-bottom: 2rem; }
+  .stay-informed__section {
+    float: left;
+    list-style: none;
+    margin: auto 1rem;
+    width: calc(25% - 2rem); }
+    .stay-informed__section:first-of-type {
+      margin-left: 0;
+      width: calc(25% - 1rem); }
+    .stay-informed__section:last-of-type {
+      margin-right: 0;
+      width: calc(25% - 1rem); }
+    .stay-informed__section .strong {
+      font-size: 1rem;
+      font-weight: bold; }
+  .stay-informed__list {
+    border-bottom: 1px solid #888;
+    padding: 0.7rem 0; }
+    .stay-informed__list span:last-of-type {
+      color: #888;
+      font-size: 0.8rem; }
+    .stay-informed__list:last-child {
+      border-bottom: none;
+      padding-bottom: 3rem; }
 
 footer {
   bottom: 0;

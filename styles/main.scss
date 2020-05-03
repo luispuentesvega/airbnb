@@ -1,5 +1,6 @@
 $main-color: #ff385c;
 $light-gray: #888;
+$second-gray: rgb(247, 247, 247);
 
 @mixin linear-gradient($direction, $color-stops...) {
   background: nth(nth($color-stops, 1), 1);
@@ -24,7 +25,7 @@ body {
 .main-header,
 .main-body {
   margin: 0 auto;
-  padding: 1rem 5rem;
+  padding: 1rem 4rem;
 }
 
 // Header
@@ -240,7 +241,7 @@ body {
 
   &__body {
     display: flex;
-    // padding: 2rem 2rem;
+
     .section {
       background-color: rgb(34, 34, 34);
       border-radius: 10px;
@@ -248,41 +249,51 @@ body {
       margin: 1rem;
       overflow: hidden;
       box-sizing: border-box;
+
       &__image {
         img {
           height: 100%;
           width: 100%;
         }
       }
+
       &__legend {
         padding: 0.5rem 1rem 1.5rem;
       }
     }
+
     .section:first-of-type {
       width: 50%;
       max-height: 600px;
+
       img {
         max-height: 550px;
       }
     }
+
     .container {
       width: 50%;
+
       .section--small {
         float: left;
         max-height: 275px;
         max-width: 392px;
         width: calc(50% - 2rem);
+
         img {
           max-height: 225px;
         }
       }
+
       .section--small::after {
         clear: both;
       }
+
       .section--medium {
         max-width: 784px;
         width: calc(100% - 2rem);
         max-height: 275px;
+
         img {
           max-height: 225px;
         }
@@ -295,6 +306,8 @@ body {
 .hero {
   color: #000;
   margin-top: 3rem;
+  min-height: 140px;
+
   &__section {
     float: left;
     width: 50%;
@@ -308,6 +321,46 @@ body {
 
     &:nth-child(2) {
       padding: 0 6rem 0 2rem;
+    }
+  }
+}
+
+// Stay informed section
+.stay-informed {
+  background-color: $second-gray;
+  overflow: hidden;
+  &__title {
+    padding-top: 3rem;
+    padding-bottom: 2rem;
+  }
+  &__section {
+    float: left;
+    list-style: none;
+    margin: auto 1rem;
+    width: calc(25% - 2rem);
+    &:first-of-type {
+      margin-left: 0;
+      width: calc(25% - 1rem);
+    }
+    &:last-of-type {
+      margin-right: 0;
+      width: calc(25% - 1rem);
+    }
+    .strong {
+      font-size: 1rem;
+      font-weight: bold;
+    }
+  }
+  &__list {
+    border-bottom: 1px solid $light-gray;
+    padding: 0.7rem 0;
+    span:last-of-type {
+      color: $light-gray;
+      font-size: 0.8rem;
+    }
+    &:last-child {
+      border-bottom: none;
+      padding-bottom: 3rem;
     }
   }
 }
